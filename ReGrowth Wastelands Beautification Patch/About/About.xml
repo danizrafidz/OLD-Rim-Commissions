@@ -1,0 +1,26 @@
+<ModMetaData>
+	<packageId>YazuOzama.Wastelands.Beautification.patch</packageId>
+	<name>ReGrowth: Wastelands Beautification patch</name>
+	<author>YazoOzama</author>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>regrowth.botr.wastelands</packageId>
+			<displayName>ReGrowth: Wastelands</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2122461695</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>odeum.wmbp</packageId>
+			<displayName>World Map Beautification Project</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2314407956</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>regrowth.botr.wastelands</li>
+	</loadAfter>
+	<description>
+	Ouranos Commissioned Mod
+	</description>
+</ModMetaData>
