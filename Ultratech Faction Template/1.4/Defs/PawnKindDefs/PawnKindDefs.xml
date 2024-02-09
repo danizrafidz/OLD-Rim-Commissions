@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Template -->
+
+  <!--===================== Player =========================-->
+
+  <!--===================== Archocult Military Base Class, 
+use ParentName of this class if you want to create new PawnKinds =========================-->
+
+  <PawnKindDef Name="ArchocultMilitaryBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>ArchocultCivil</defaultFactionType>
+    <maxGenerationAge>45</maxGenerationAge>
+    <backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+    <styleItemTags>
+      <li>
+        <tag>Soldier</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+    <chemicalAddictionChance>0.1</chemicalAddictionChance>
+    <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Normal</itemQuality>
+    <weaponMoney>900~2700</weaponMoney>
+    <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <apparelMoney>1100~2300</apparelMoney>
+    <!-- <apparelRequired>
+      <li>blank</li> 
+    </apparelRequired> -->    <!-- Optional-->
+    <apparelTags>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <techHediffsChance>0.3</techHediffsChance>
+    <techHediffsMoney>1000~1500</techHediffsMoney>
+    <biocodeWeaponChance>0.7</biocodeWeaponChance>
+    <disallowedTraits>
+      <li>blank</li>
+    </disallowedTraits>
+  </PawnKindDef>
+
+  <!--===================== Archocult Civilian =========================-->
+
+  <!--===================== Archocult Soldier =========================-->
+
+  <PawnKindDef Name="ArchocultSoldierBase" ParentName="ArchocultMilitaryBase">
+    <defName>Archocult_Soldier</defName>
+    <label>archocult soldier</label>
+    <combatPower>75</combatPower>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~10</range>
+      </li>
+    </skills>
+    <apparelRequired>
+      <li>Apparel_FlakJacket</li>
+      <li>Apparel_FlakVest</li>
+      <li>Apparel_AdvancedHelmet</li>
+    </apparelRequired>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <weaponTags>      <!-- Placeholder lists, create in <ThingDef> -->
+      <li>ArchocultGun</li>
+      <li>ArchocultAdvancedGun</li>
+    </weaponTags>
+    <initialResistanceRange>15~24</initialResistanceRange>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.03</Neanderthal>
+        <Genie MayRequire="Ludeon.RimWorld.Biotech">0.02</Genie>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+  <apparelMoney>4000~7500</apparelMoney>
+  <apparelColor>(160,160,200)</apparelColor>
+  <techHediffsTags>
+    <li>Simple</li>
+    <li>Advanced</li>
+    <li>ImplantEmpireCommon</li>
+  </techHediffsTags>
+  <initialWillRange>2~4</initialWillRange>
+  <specificApparelRequirements>    <!-- Specific requirements for apparel -->
+    <li>
+      <bodyPartGroup>Torso</bodyPartGroup>
+      <apparelLayer>OnSkin</apparelLayer>
+      <stuff>Hyperweave</stuff>
+    </li>
+    <li>
+      <bodyPartGroup>Legs</bodyPartGroup>
+      <apparelLayer>OnSkin</apparelLayer>
+      <stuff>Hyperweave</stuff>
+    </li>
+    <li>
+      <bodyPartGroup>UpperHead</bodyPartGroup>
+      <apparelLayer>Overhead</apparelLayer>
+      <stuff>Plasteel</stuff>
+    </li>
+  </specificApparelRequirements>
+</PawnKindDef>
+
+<PawnKindDef ParentName="SpacerSecurityBase">
+
+  <!--===================== Archocult etc =========================-->
+
+</Defs>

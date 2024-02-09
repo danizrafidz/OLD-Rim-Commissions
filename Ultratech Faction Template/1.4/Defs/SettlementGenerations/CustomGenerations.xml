@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Please share me the save file with .rws format, then i'll put it here -->
+
+    <KCSG.StructureLayoutDef>
+        <defName>Archocult_Base1</defName>
+        <isStorage>true</isStorage>
+        <spawnConduits>false</spawnConduits>
+        <layouts>
+            <li></li>
+        </layouts>
+        <roofGrid>
+        </roofGrid>
+        <terrainGrid>
+            <li></li>
+        </terrainGrid>
+        <forceGenerateRoof>true</forceGenerateRoof>
+        <tags>
+            <li>ArchocultBaseGen</li>
+        </tags>
+        <modRequirements>
+            <li>package.id</li>
+        </modRequirements>
+    </KCSG.StructureLayoutDef>
+
+    <!-- Archocult Base Variant 2 -->
+
+    <!-- Archocult Rough Base Variant 1 -->
+
+    <!-- Archocult Rough Base Variant 2 -->
+
+    <!-- Archocult Rough Base Variant 3 -->
+
+    <!-- Archocult Sanctum Variant 1 -->
+
+    <!-- Archocult Sanctum Variant 2 -->
+
+</Defs>

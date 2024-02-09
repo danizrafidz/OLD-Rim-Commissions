@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- Need to be put in <QuestScriptDef> in order to generate this site -->
+
+    <SitePartDef>
+        <defName>Archocult Sanctum</defName>
+        <label>archocult sanctum</label>
+        <description>An enigmatic structure where the archotech cult conducts their futuristic rituals and experiments with advanced technology infused with occult practices to cthulhu.</description>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>World/WorldObjects/Expanding/Sites/ArchocultSanctum</expandingIconTexture>
+        <tags>
+            <li>ArchocultSanctum</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>Archocult_Sanctum</defName>
+        <linkWithSite>ArchocultSanctum</linkWithSite>
+        <order>450</order>
+        <genStep Class="KCSG.GenStep_CustomStructureGen">
+            <structureLayoutDefs>
+                <li>Archocult_Sanctum1</li>
+                <li>Archocult_Sanctum2</li>
+            </structureLayoutDefs>
+            <filthTypes>
+                <li>Filth_Dirt</li>
+                <li>Filth_Trash</li>
+                <li>Filth_RubbleBuilding</li>
+            </filthTypes>
+            <scatterThings>
+                <li>Gold</li>
+                <li>Silver</li>
+            </scatterThings>
+            <scatterChance>0.02</scatterChance>
+            <symbolResolvers>
+                <li>kcsg_randomdamage</li>
+                <li>kcsg_randomfilth</li>
+                <li>kcsg_randomterrainremoval</li>
+                <li>kcsg_randomroofremoval</li>
+                <li>kcsg_randomitemremoval</li>
+                <li>kcsg_removeperishable</li>
+                <li>kcsg_destroyrefuelablelightsource</li>
+                <li>kcsg_scatterstuffaround</li>
+            </symbolResolvers>
+        </genStep>
+    </GenStepDef>
+</Defs>

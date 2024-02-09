@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- IF, you want to play as Archotech cult faction, unlock this -->
+
+    <!-- <FactionDef ParentName="PlayerFactionBase">
+        <defName>PlayerArchocultColony</defName>
+        <label>New Colonists</label>
+        <description>An archotech cult of xenotypes based on cthulhu mythos.</description>
+        <isPlayer>true</isPlayer>
+        <basicMemberKind>ArchocultColonist</basicMemberKind>
+        <pawnSingular>colonist</pawnSingular>
+        <pawnsPlural>colonists</pawnsPlural>
+        <techLevel>Ultratech</techLevel>
+        <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+        <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+        <allowedCultures>
+            <li>Astropolitan</li>
+        </allowedCultures>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                </categories>
+            </li>
+        </backstoryFilters>
+        <factionIconPath>World/WorldObjects/Example/Example</factionIconPath>
+        <startingResearchTags>
+            <li>ClassicStart</li>
+        </startingResearchTags>
+        <startingTechprintsResearchTags>
+            <li>ClassicStart</li>
+            <li>ClassicStartTechprints</li>
+        </startingTechprintsResearchTags>
+        <apparelStuffFilter>
+            <thingDefs>
+                <li>Hyperweave</li>
+            </thingDefs>
+        </apparelStuffFilter>
+    </FactionDef> -->
+
+
+    <!-- Basically the parent class of NPC Factions -->
+
+    <FactionDef ParentName="FactionBase" Name="ArchocultFactionBase" Abstract="True">
+        <pawnSingular>archocult</pawnSingular>
+        <pawnsPlural>archocults</pawnsPlural>
+        <categoryTag>Ultra</categoryTag>
+        <listOrderPriority>380</listOrderPriority>
+        <settlementGenerationWeight>1</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <canMakeRandomly>true</canMakeRandomly>
+        <canSiege>true</canSiege>
+        <canStageAttacks>true</canStageAttacks>
+        <leaderTitle>Archocult Leader</leaderTitle>
+        <factionIconPath>World/WorldObjects/Example/Example</factionIconPath>
+        <techLevel>Ultratech</techLevel>
+
+        <!-- If you want to change faction and settlement names, you could create <RulePackDef> -->
+        <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+        <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+
+        <!-- Culture, Memes, Xenotype and Backstory Section -->
+        <allowedCultures>
+            <li>Astropolitan</li>
+        </allowedCultures>
+        <disallowedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+        </disallowedMemes>
+        <structureMemeWeights>
+            <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+            <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+            <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Ideological>
+            <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">4</Structure_Archist>
+        </structureMemeWeights>
+        <xenotypeSet>
+            <xenotypeChances>
+                <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.3</Hussar>
+                <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.3</Dirtmole>
+                <Genie MayRequire="Ludeon.RimWorld.Biotech">0.4</Genie>
+            </xenotypeChances>
+        </xenotypeSet>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Outlander</li>
+                </categories>
+                <commonality>0.3</commonality>
+            </li>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                </categories>
+                <commonality>0.7</commonality>
+            </li>
+        </backstoryFilters>
+
+        <!-- Caraavan Trader  Visitor Trader, Base Trader, and Loot Section -->
+        <caravanTraderKinds>
+            <li>Caravan_Archocult_BulkGoods</li>
+            <li>Caravan_Archocult_CombatSupplier</li>
+            <li>Caravan_Archocult_Exotic</li>
+            <li>Caravan_Archocult_PirateMerchant</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>
+            <li>Visitor_Outlander_Standard</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>
+            <li>Base_Archocult_Standard</li>
+        </baseTraderKinds>
+        <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+        <raidLootMaker>ArchocultRaidLootMaker</raidLootMaker>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+
+        <!-- Raid, Visitor, Trader, and Settlement pawn generation Section -->
+        <pawnGroupMakers>
+            <li>
+                <!-- Normal fights, standard mix -->
+                <kindDef>Combat</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <Archocult_Soldier>10</Archocult_Soldier>                    <!-- Placeholder-->
+                </options>
+            </li>
+
+            <li>
+                <!-- Combat 2nd variant -->
+                <kindDef>Combat</kindDef>
+                <commonality>35</commonality>
+                <options>
+                    <Archocult_Soldier>20</Archocult_Soldier>
+                </options>
+            </li>
+
+            <li>
+                <!-- Combat 3rd variant -->
+                <kindDef>Combat</kindDef>
+                <commonality>10</commonality>
+                <options>
+                    <Archocult_Soldier>30</Archocult_Soldier>
+                    <Archocult_Elite_Soldier>5</Archocult_Elite_Soldier>
+                </options>
+            </li>
+
+            <li>
+                <!-- Siege Assault Type -->
+                <kindDef>Combat</kindDef>
+                <commonality>15</commonality>
+                <disallowedStrategies>
+                    <li>Siege</li>
+                </disallowedStrategies>
+                <options>
+                    <Archocult_Soldier>10</Archocult_Soldier>
+                </options>
+            </li>
+
+            <!-- Visitor Type -->
+            <li>
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <Archocult_Soldier>5</Archocult_Soldier>
+                    <Archocult_Civilian>5</Archocult_Civilian>
+                    <Villager_Child MayRequire="Ludeon.RimWorld.Biotech">10</Villager_Child>
+                </options>
+            </li>
+
+            <!-- Trader Type -->
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <Archocult_Common_Trader>1</Archocult_Common_Trader>                    <!-- Create new PawnKinds for this -->
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2</Alpaca>
+                    <Elephant>1</Elephant>
+                </carriers>
+                <guards>
+                    <Archocult_Soldier>30</Archocult_Soldier>
+                    <Archocult_Elite_Soldier>5</Archocult_Elite_Soldier>
+                </guards>
+            </li>
+
+            <!-- Settlement Type -->
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <Archocult_Soldier>50</Archocult_Soldier>
+                    <Archocult_Elite_Soldier>15</Archocult_Elite_Soldier>
+                    <Archocult_Commander>1</Archocult_Commander>
+                </options>
+            </li>
+
+            <!-- Quest Working Site Type -->
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Miners</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Archocult_Miner>5</Archocult_Miner>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Hunters</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Archocult_Hunter>1</Archocult_Hunter>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Loggers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Archocult_Logger>1</Archocult_Logger>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Farmers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Archocult_Farmer>1</Archocult_Farmer>
+                </options>
+            </li>
+        </pawnGroupMakers>
+        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>        <!-- It's already default-->
+    </FactionDef>
+
+    <!-- Raid Loot Maker, Reference to line 113 -->
+    <ThingSetMakerDef>
+        <defName>ArchocultRaidLootMaker</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                        <li>MedicineUltratech</li>
+                        <li>MealSurvivalPack</li>
+                        <li>Hyperweave</li>
+                    </thingDefs>
+                </filter>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
+    <!-- Archocult Civil Faction -->
+    <FactionDef ParentName="ArchocultFactionBase">
+        <defName>ArchocultCivil</defName>
+        <label>blank</label>
+        <description>An archotech cult of xenotypes based on cthulhu mythos.</description>
+        <colorSpectrum>
+            <li>(0.7, 0.7, 0.7)</li>
+        </colorSpectrum>
+        <requiredMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
+        </requiredMemes>
+        <disallowedPrecepts>
+            <li>Slavery_Classic</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Honorable</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Acceptable</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Abhorrent</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Horrible</li>
+        </disallowedPrecepts>
+        <classicIdeo>true</classicIdeo>
+        <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>381</configurationListOrderPriority>
+    </FactionDef>
+
+    <FactionDef ParentName="ArchocultFactionBase" Name="ArchocultRoughBase" Abstract="True">
+        <colorSpectrum>
+            <li>(0.3, 0.3, 0.3)</li>
+        </colorSpectrum>
+        <naturalEnemy>true</naturalEnemy>
+        <requiredMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+        </requiredMemes>
+        <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>382</configurationListOrderPriority>
+        <modExtensions>
+            <!-- Linked to CustomGenerations -->
+            <li Class="KCSG.CustomGenOption">
+                <chooseFromlayouts>
+                    <li>Archocult_CivilBase1</li>
+                    <li>Archocult_CivilBase1</li>
+                </chooseFromlayouts>
+            </li>
+        </modExtensions>
+    </FactionDef>
+
+    <!-- Archocult Rough Faction -->
+    <FactionDef ParentName="ArchocultRoughBase">
+        <defName>ArchocultRough</defName>
+        <label>blank</label>
+        <description>blank</description>
+        <factionIconPath>World/WorldObjects/Example/Example</factionIconPath>
+        <modExtensions>
+            <!-- Linked to CustomGenerations -->
+            <li Class="KCSG.CustomGenOption">
+                <chooseFromlayouts>
+                    <li>Archocult_RoughBase1</li>
+                    <li>Archocult_RoughBase2</li>
+                    <li>Archocult_RoughBase3</li>
+                </chooseFromlayouts>
+            </li>
+        </modExtensions>
+    </FactionDef>
+
+    <!-- Archocult More Custom Faction, just use Archocult Civil or Rough Faction Format  -->
+
+</Defs>
