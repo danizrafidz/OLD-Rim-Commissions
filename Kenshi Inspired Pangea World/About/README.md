@@ -2,7 +2,7 @@
 ![Ouranos_Commissioned_World](https://github.com/danizrafidz/Rim-Commissions/assets/105960343/301f3bdd-734a-4a31-b11d-3e8c0cbc9ef5)
 
 ## Sketch/Map Plan
-![image](https://github.com/danizrafidz/Rim-Commissions/assets/105960343/70140a66-d038-4133-adb4-595ace6ed948)
+![Kenshi_Inspired_Pangea](https://github.com/danizrafidz/Rim-Commissions/assets/105960343/7e793e39-a458-4726-a1b9-28fd779f148d)
 
 ## Made colorable pollution quick tool for better view (light, moderate, extreme)
 ![RimworldCommissionWorldPollutionDistribution](https://github.com/danizrafidz/Rim-Commissions/assets/105960343/96c1435d-14aa-4839-80ef-1eeb56ded039)
