@@ -1,0 +1,30 @@
+<ModMetaData>
+	<packageId>Danz.ShellAttachmentPatch</packageId>
+	<name>Shell Attachment Patch</name>
+	<author>Danzen</author>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Royalty</packageId>
+			<displayName>RimWorld - Royalty</displayName>
+			<steamWorkshopUrl>/</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>dankpyon.medieval.overhaul</li>
+		<li>botchjob.divineorder</li>
+		<li>sierra.rf.medievaloverhaul</li>
+		<li>ogam.medievaloverhaul.arcanearchaeologists</li>
+		<li>arisher.medieval.tailor</li>
+		<li>neronix17.outland.core</li>
+		<li>al9000.medievaleuropeanarmors</li>
+		<li>oskarpotocki.vanillafactionsexpanded.medievalmodule</li>
+		<li>oskarpotocki.vfe.vikings</li>
+		<li>vanillaexpanded.vpsycastse</li>
+	</loadAfter>
+	<description>
+	ztblitz Commissioned Mod
+	</description>
+</ModMetaData>

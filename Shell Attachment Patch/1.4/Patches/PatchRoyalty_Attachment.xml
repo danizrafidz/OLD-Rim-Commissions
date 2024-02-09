@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- the base game rimworld cape of course -->
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_Cape"]/apparel/layers</xpath>
+        <value>
+            <layers>
+                <li>DankPyon_ShellAttachment</li>
+            </layers>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_RobeRoyal"]/apparel/layers</xpath>
+        <value>
+            <layers>
+                <li>DankPyon_ShellAttachment</li>
+            </layers>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Apparel_PsyfocusRobe"]/apparel/layers</xpath>
+        <value>
+            <layers>
+                <li>DankPyon_ShellAttachment</li>
+            </layers>
+        </value>
+    </Operation>
+
+</Patch>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Divine Order :
+(Divine order Cloak,
+Divine order Fur Cloak 
+Inquisitor Cloak) -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Divine Order</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="BotchJob_DivineOrderCloak"]/apparel/layers</xpath>
+                    <value>
+                        <layers>
+                            <li>DankPyon_ShellAttachment</li>
+                        </layers>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="BotchJob_DivineOrderFurCloak"]/apparel/layers</xpath>
+                    <value>
+                        <layers>
+                            <li>DankPyon_ShellAttachment</li>
+                        </layers>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="BotchJob_InquisitorCloak"]/apparel/layers</xpath>
+                    <value>
+                        <layers>
+                            <li>DankPyon_ShellAttachment</li>
+                        </layers>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- VFE Medieval :
+Kings Robes -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Medieval</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VFEM_Apparel_KingsRobes"]/apparel/layers</xpath>
+                    <value>
+                        <layers>
+                            <li>DankPyon_ShellAttachment</li>
+                        </layers>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- Vanilla Expanded Vikings :
+Jarl Cape -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Vikings</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VFEV_Apparel_JarlCape"]/apparel/layers</xpath>
+                    <value>
+                        <layers>
+                            <li>DankPyon_ShellAttachment</li>
+                        </layers>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- Psycast Expanded :
+Arcane Cape -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Psycasts Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VPE_Apparel_EltexCape"]/apparel/layers</xpath>
+                    <value>
+                        <layers>
+                            <li>DankPyon_ShellAttachment</li>
+                        </layers>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- Medieval Tailor:
+Cloak (Both Variants) -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medievel Tailor</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="AMT_Apparel_Cloak"]/apparel/layers</xpath>
+                    <value>
+                        <layers>
+                            <li>DankPyon_ShellAttachment</li>
+                        </layers>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="AMT_Apparel_WinterCloak"]/apparel/layers</xpath>
+                    <value>
+                        <layers>
+                            <li>DankPyon_ShellAttachment</li>
+                        </layers>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- Outland Core:
+Shoulder Cloak -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Outland - Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Outland_ShoulderCloak"]/apparel/layers</xpath>
+                    <value>
+                        <layers>
+                            <li>DankPyon_ShellAttachment</li>
+                        </layers>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- Tastier Armory - Medieval European Armors
+Cloak & Kids Cloak -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Tastier Armory - Medieval European Armors</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="TC_Cloak"]/apparel/layers</xpath>
+                    <value>
+                        <layers>
+                            <li>DankPyon_ShellAttachment</li>
+                        </layers>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="TC_KidCloak"]/apparel/layers</xpath>
+                    <value>
+                        <layers>
+                            <li>DankPyon_ShellAttachment</li>
+                        </layers>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
