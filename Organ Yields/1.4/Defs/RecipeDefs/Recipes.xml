@@ -1,0 +1,42 @@
+<!-- <?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <RecipeDef>
+    <defName>Make_FeatherFabric</defName>
+    <label>make featherfabric</label>
+    <description>Make featherfabric from feathers.</description>
+	<researchPrerequisite>Romy_FeatherFabric</researchPrerequisite>
+    <recipeUsers>
+      <li>ElectricTailoringBench</li>
+      <li>HandTailoringBench</li>
+    </recipeUsers>
+	<skillRequirements>
+        <Crafting>8</Crafting>
+    </skillRequirements>
+    <jobString>Making featherfabric.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workAmount>2000</workAmount>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Romy_Feathers</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+	  <thingDefs>
+		<li>Romy_Feathers</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Romy_FeatherFabric>25</Romy_FeatherFabric>
+    </products>
+  </RecipeDef>
+
+</Defs> -->

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Organ Yields</name>
+	<author>Danzen</author>
+	<packageId>Danzen.OrganYields</packageId>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<description>A mod that adds organ yields for butchering animals and humans.</description>
+	<modDependencies>
+		<li>
+			<packageId>epicfloor.CustomButcherFramework</packageId>
+			<displayName>Custom Butcher Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2848410310</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>epicfloor.CustomButcherFramework</li>
+	</loadAfter>
+</ModMetaData>

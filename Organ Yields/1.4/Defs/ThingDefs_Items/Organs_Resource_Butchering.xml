@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Abstract="True" ParentName="OrganicProductBase" Name="InternalOrgansProductBase">
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <Mass>0.1</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>2</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <foodType>AnimalProduct</foodType>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <preferability>DesperateOnly</preferability>
+      <tasteThought>AteRawFood</tasteThought>
+      <babiesCanIngest>false</babiesCanIngest>
+    </ingestible>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef Abstract="True" ParentName="OrganicProductBase" Name="ExternalOrgansProductBase">
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <Mass>0.1</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>3</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <foodType>AnimalProduct</foodType>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <preferability>RawBad</preferability>
+      <tasteThought>AteRawFood</tasteThought>
+      <babiesCanIngest>false</babiesCanIngest>
+    </ingestible>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!-- Organs ThingDefs -->
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Liver</defName>
+    <label>liver</label>
+    <description>Liver from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Kidney</defName>
+    <label>kidney</label>
+    <description>Kidney from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Spleen</defName>
+    <label>spleen</label>
+    <description>Spleen from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Heart</defName>
+    <label>heart</label>
+    <description>Heart from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Brain</defName>
+    <label>brain</label>
+    <description>Brain from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Lung</defName>
+    <label>lung</label>
+    <description>Lung from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Intestine</defName>
+    <label>intestine</label>
+    <description>Intestine from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Gonad</defName>
+    <label>gonad</label>
+    <description>Gonad from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Sweetbread</defName>
+    <label>sweetbread</label>
+    <description>Sweetbread from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Tongue</defName>
+    <label>tongue</label>
+    <description>Tongue from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Eye</defName>
+    <label>eye</label>
+    <description>Eye from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OY_Ear</defName>
+    <label>ear</label>
+    <description>Ear from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Liver</texPath>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

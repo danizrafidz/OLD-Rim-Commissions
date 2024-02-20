@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationInsert">
+				<xpath>Defs/ThingDef[@Name="AnimalThingBase"]/race</xpath>
+				<value>
+					<modExtensions>
+						<li Class="CustomButcherFramework.CustomButcherExtension">
+							<customButcherProducts>
+								<OY_Liver>1</OY_Liver>
+								<OY_Kidney>2</OY_Kidney>
+								<OY_Spleen>1</OY_Spleen>
+								<OY_Heart>1</OY_Heart>
+								<OY_Brain>1</OY_Brain>
+								<OY_Lung>2</OY_Lung>
+								<OY_Intestine>2</OY_Intestine>
+								<OY_Gonad>2</OY_Gonad>
+								<OY_Sweetbread>2</OY_Sweetbread>
+								<OY_Tongue>1</OY_Tongue>
+								<OY_Eye>1</OY_Eye>
+								<OY_Ear>1</OY_Ear>
+							</customButcherProducts>
+							<maxAmount>
+								<li>1</li>
+								<li>2</li>
+								<li>1</li>
+								<li>1</li>
+								<li>1</li>
+								<li>2</li>
+								<li>2</li>
+								<li>2</li>
+								<li>2</li>
+								<li>1</li>
+								<li>2</li>
+								<li>2</li>
+							  </maxAmount>
+						</li>
+					</modExtensions>
+				</value>
+			</li>
+
+			<li Class="PatchOperationInsert">
+				<xpath>Defs/ThingDef[defName="Human"]/race</xpath>
+				<value>
+					<modExtensions>
+						<li Class="CustomButcherFramework.CustomButcherExtension">
+							<customButcherProducts>
+								<OY_Liver>1</OY_Liver>
+								<OY_Kidney>2</OY_Kidney>
+								<OY_Spleen>1</OY_Spleen>
+								<OY_Heart>1</OY_Heart>
+								<OY_Brain>1</OY_Brain>
+								<OY_Lung>2</OY_Lung>
+								<OY_Intestine>2</OY_Intestine>
+								<OY_Gonad>2</OY_Gonad>
+								<OY_Sweetbread>2</OY_Sweetbread>
+								<OY_Tongue>1</OY_Tongue>
+								<OY_Eye>1</OY_Eye>
+								<OY_Ear>1</OY_Ear>
+							</customButcherProducts>
+							<maxAmount>
+								<li>1</li>
+								<li>2</li>
+								<li>1</li>
+								<li>1</li>
+								<li>1</li>
+								<li>2</li>
+								<li>2</li>
+								<li>2</li>
+								<li>2</li>
+								<li>1</li>
+								<li>2</li>
+								<li>2</li>
+							  </maxAmount>
+						</li>
+					</modExtensions>
+				</value>
+			</li>
+
+		</operations>
+	</Operation>
+
+</Patch>
