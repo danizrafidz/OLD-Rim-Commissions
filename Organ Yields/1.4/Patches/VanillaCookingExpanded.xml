@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Cooking Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <RecipeDef Name="OD_CookOrgansYieldBase" Abstract="True">
+                            <fixedIngredientFilter>
+                                <categories>
+                                    <li>FoodRaw</li>
+                                    <li>VCE_Condiments</li>
+                                </categories>
+                                <specialFiltersToDisallow>
+                                    <li>AllowPlantFood</li>
+                                </specialFiltersToDisallow>
+                            </fixedIngredientFilter>
+                            <defaultIngredientFilter>
+                                <categories>
+                                    <li>FoodRaw</li>
+                                    <li>VCE_Condiments</li>
+                                </categories>
+                                <disallowedCategories>
+                                    <li>EggsFertilized</li>
+                                </disallowedCategories>
+                                <disallowedThingDefs>
+                                    <li>Meat_Human</li>
+                                    <li>Meat_Megaspider</li>
+                                    <li>InsectJelly</li>
+                                </disallowedThingDefs>
+                            </defaultIngredientFilter>
+                            <workSkill>Cooking</workSkill>
+
+                            <workSpeedStat>CookSpeed</workSpeedStat>
+                            <effectWorking>Cook</effectWorking>
+                            <soundWorking>Recipe_CookMeal</soundWorking>
+                            <allowMixingIngredients>true</allowMixingIngredients>
+                            <skillRequirements>
+                                <Cooking>8</Cooking>
+                            </skillRequirements>
+                        </RecipeDef>
+
+                        <RecipeDef ParentName="OD_CookOrgansYieldBase">
+                            <defName>Cook_Chitterlings</defName>
+                            <label>cook chitterlings</label>
+                            <description>Cook a culinary work of art from intestine and condiment.</description>
+                            <jobString>Cooking chitterlings.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Intestine</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>VCE_Condiments</li>
+                                        </categories>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <recipeUsers>
+                                <li>ElectricStove</li>
+                                <li>FueledStove</li>
+                            </recipeUsers>
+                            <products>
+                                <OD_Chitterlings>1</OD_Chitterlings>
+                            </products>
+                        </RecipeDef>
+
+                        <RecipeDef ParentName="OD_CookOrgansYieldBase">
+                            <defName>Cook_Rocky_Mountain_Oysters</defName>
+                            <label>cook rocky mountain oysters</label>
+                            <description>Cook a culinary work of art from gonads, can be created in
+                                deep fry.</description>
+                            <jobString>Cooking rocky mountain oysters.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Gonad</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>4</count>
+                                </li>
+                            </ingredients>
+                            <recipeUsers>
+                                <li>VCE_DeepFrier</li>
+                            </recipeUsers>
+                            <products>
+                                <OD_Rocky_Mountain_Oysters>1</OD_Rocky_Mountain_Oysters>
+                            </products>
+                        </RecipeDef>
+
+                        <RecipeDef ParentName="OD_CookOrgansYieldBase">
+                            <defName>Cook_Offal</defName>
+                            <label>cook offal</label>
+                            <description>Cook a culinary work of art from sweetbeard, lung and
+                                vegetarian raw.</description>
+                            <jobString>Cooking offal.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Sweetbread</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Lung</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>PlantFoodRaw</li>
+                                        </categories>
+                                    </filter>
+                                    <count>10</count>
+                                </li>
+                            </ingredients>
+                            <recipeUsers>
+                                <li>ElectricStove</li>
+                                <li>FueledStove</li>
+                            </recipeUsers>
+                            <products>
+                                <OD_Offal>1</OD_Offal>
+                            </products>
+                        </RecipeDef>
+
+                        <RecipeDef ParentName="OD_CookOrgansYieldBase">
+                            <defName>Cook_Pan_Fried_Heart</defName>
+                            <label>cook pan fried heart</label>
+                            <description>Cook a culinary work of art from heart, vegetarian raw, and
+                                condiment.</description>
+                            <jobString>Cooking pan fried heart.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Heart</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>PlantFoodRaw</li>
+                                        </categories>
+                                    </filter>
+                                    <count>10</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>VCE_Condiments</li>
+                                        </categories>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <recipeUsers>
+                                <li>ElectricStove</li>
+                                <li>FueledStove</li>
+                            </recipeUsers>
+                            <products>
+                                <OD_Pan_Fried_Heart>1</OD_Pan_Fried_Heart>
+                            </products>
+                        </RecipeDef>
+
+                        <RecipeDef ParentName="OD_CookOrgansYieldBase">
+                            <defName>Cook_Tripe_Soup</defName>
+                            <label>cook tripe soup</label>
+                            <description>Cook a culinary work of art from tripe, vegetarian raw, and
+                                condiment.</description>
+                            <jobString>Cooking tripe soup.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Tripe</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>PlantFoodRaw</li>
+                                        </categories>
+                                    </filter>
+                                    <count>10</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>VCE_Condiments</li>
+                                        </categories>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <recipeUsers>
+                                <li>ElectricStove</li>
+                                <li>FueledStove</li>
+                            </recipeUsers>
+                            <products>
+                                <OD_Tripe_Soup>1</OD_Tripe_Soup>
+                            </products>
+                        </RecipeDef>
+
+                        <RecipeDef ParentName="OD_CookOrgansYieldBase">
+                            <defName>Cook_Pan_Fried_Spleen</defName>
+                            <label>cook pan fried spleen</label>
+                            <description>Cook a culinary work of art from spleen, vegetarian raw,
+                                and condiment.</description>
+                            <jobString>Cooking pan fried spleen.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Spleen</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>PlantFoodRaw</li>
+                                        </categories>
+                                    </filter>
+                                    <count>10</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>VCE_Condiments</li>
+                                        </categories>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <recipeUsers>
+                                <li>ElectricStove</li>
+                                <li>FueledStove</li>
+                            </recipeUsers>
+                            <products>
+                                <OD_Pan_Fried_Spleen>1</OD_Pan_Fried_Spleen>
+                            </products>
+                        </RecipeDef>
+
+                        <RecipeDef ParentName="OD_CookOrgansYieldBase">
+                            <defName>Cook_Sauteed_Kidney_Bites</defName>
+                            <label>cook sauteed kidney bites</label>
+                            <description>Cook a culinary work of art from kidney and condiment.</description>
+                            <jobString>Cooking sauteed kidney bites.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Kidney</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>VCE_Condiments</li>
+                                        </categories>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <recipeUsers>
+                                <li>ElectricStove</li>
+                                <li>FueledStove</li>
+                            </recipeUsers>
+                            <products>
+                                <OD_Sauteed_Kidney_Bites>1</OD_Sauteed_Kidney_Bites>
+                            </products>
+                        </RecipeDef>
+
+                        <RecipeDef ParentName="OD_CookOrgansYieldBase">
+                            <defName>Cook_Mixed_Morsels</defName>
+                            <label>cook mixed morsels</label>
+                            <description>Cook a culinary work of art from eye, ear, and vegetarian
+                                raw.</description>
+                            <jobString>Cooking mixed morsels.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Eye</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Ear</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>PlantFoodRaw</li>
+                                        </categories>
+                                    </filter>
+                                    <count>10</count>
+                                </li>
+                            </ingredients>
+                            <recipeUsers>
+                                <li>ElectricStove</li>
+                                <li>FueledStove</li>
+                            </recipeUsers>
+                            <products>
+                                <OD_Mixed_Morsels>1</OD_Mixed_Morsels>
+                            </products>
+                        </RecipeDef>
+
+                        <RecipeDef ParentName="OD_CookOrgansYieldBase">
+                            <defName>Cook_Head_Cheese</defName>
+                            <label>cook head cheese</label>
+                            <description>Cook a culinary work of art from brain, tongue, vegetarian
+                                raw, and condiment.</description>
+                            <jobString>Cooking head cheese.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Brain</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Tongue</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>PlantFoodRaw</li>
+                                        </categories>
+                                    </filter>
+                                    <count>10</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>VCE_Condiments</li>
+                                        </categories>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <recipeUsers>
+                                <li>ElectricStove</li>
+                                <li>FueledStove</li>
+                            </recipeUsers>
+                            <products>
+                                <OD_Head_Cheese>1</OD_Head_Cheese>
+                            </products>
+                        </RecipeDef>
+
+                        <RecipeDef ParentName="OD_CookOrgansYieldBase">
+                            <defName>Cook_Cooked_Liver</defName>
+                            <label>cook liver</label>
+                            <description>Cook a culinary work of art from liver, vegetarian raw, and
+                                condiment.</description>
+                            <jobString>Cooking liver.</jobString>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>OD_Liver</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>PlantFoodRaw</li>
+                                        </categories>
+                                    </filter>
+                                    <count>10</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <categories>
+                                            <li>VCE_Condiments</li>
+                                        </categories>
+                                    </filter>
+                                    <count>1</count>
+                                </li>
+                            </ingredients>
+                            <recipeUsers>
+                                <li>ElectricStove</li>
+                                <li>FueledStove</li>
+                            </recipeUsers>
+                            <products>
+                                <OD_Cooked_Liver>1</OD_Cooked_Liver>
+                            </products>
+                        </RecipeDef>
+
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+</Patch>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef Abstract="True" ParentName="MealCooked" Name="OrgansYieldMeal">
+        <statBases>
+            <MarketValue>50</MarketValue>
+            <WorkToMake>1000</WorkToMake>
+            <Nutrition>1.2</Nutrition>
+        </statBases>
+        <ingestible>
+            <preferability>MealLavish</preferability>
+            <optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes>
+            <tasteThought>AteLavishMeal</tasteThought>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="OrgansYieldMeal">
+        <defName>OD_Chitterlings</defName>
+        <label>chitterlings</label>
+        <description>A culinary work of art from intestine and condiment.</description>
+        <graphicData>
+            <texPath>Things/Meal/OD_Chitterlings</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="OrgansYieldMeal">
+        <defName>OD_Rocky_Mountain_Oysters</defName>
+        <label>rocky mountain oyster</label>
+        <description>A culinary work of art from gonads.</description>
+        <graphicData>
+            <texPath>Things/Meal/OD_Rocky_Mountain_Oysters</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="OrgansYieldMeal">
+        <defName>OD_Offal</defName>
+        <label>offal</label>
+        <description>A culinary work of art from sweetbeard, lung and vegetarian raw.</description>
+        <graphicData>
+            <texPath>Things/Meal/OD_Offal</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="OrgansYieldMeal">
+        <defName>OD_Pan_Fried_Heart</defName>
+        <label>pan fried heart</label>
+        <description>A culinary work of art from heart, vegetarian raw, and condiment.</description>
+        <graphicData>
+            <texPath>Things/Meal/OD_Pan_Fried_Heart</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="OrgansYieldMeal">
+        <defName>OD_Tripe_Soup</defName>
+        <label>tripe soup</label>
+        <description>A culinary work of art from tripe, vegetarian raw, and condiment.</description>
+        <graphicData>
+            <texPath>Things/Meal/OD_Tripe_Soup</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="OrgansYieldMeal">
+        <defName>OD_Pan_Fried_Spleen</defName>
+        <label>pan fried spleen</label>
+        <description>A culinary work of art from spleen, vegetarian raw, and condiment.</description>
+        <graphicData>
+            <texPath>Things/Meal/OD_Pan_Fried_Spleen</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="OrgansYieldMeal">
+        <defName>OD_Sauteed_Kidney_Bites</defName>
+        <label>sauteed kidney bites</label>
+        <description>A culinary work of art from kidney and condiment.</description>
+        <graphicData>
+            <texPath>Things/Meal/OD_Sauteed_Kidney_Bites</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="OrgansYieldMeal">
+        <defName>OD_Mixed_Morsels</defName>
+        <label>mixed morsels</label>
+        <description>A culinary work of art from eye, ear, and vegetarian raw.</description>
+        <graphicData>
+            <texPath>Things/Meal/OD_Mixed_Morsels</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="OrgansYieldMeal">
+        <defName>OD_Head_Cheese</defName>
+        <label>head cheese</label>
+        <description>A culinary work of art from brain, tongue, vegetarian raw, and condiment.</description>
+        <graphicData>
+            <texPath>Things/Meal/OD_Head_Cheese</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="OrgansYieldMeal">
+        <defName>OD_Cooked_Liver</defName>
+        <label>cooked liver</label>
+        <description>A culinary work of art from liver, vegetarian raw, and condiment.</description>
+        <graphicData>
+            <texPath>Things/Meal/OD_Cooked_Liver</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+</Defs>

@@ -13,8 +13,14 @@
 			<displayName>Custom Butcher Framework</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2848410310</steamWorkshopUrl>
 		</li>
+		<li>
+			<packageId>vanillaexpanded.vcooke</packageId>
+			<displayName>Vanilla Cooking Expanded</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519</steamWorkshopUrl>
+		</li>
 	</modDependencies>
 	<loadAfter>
 		<li>epicfloor.CustomButcherFramework</li>
+		<li>vanillaexpanded.vcooke</li>
 	</loadAfter>
 </ModMetaData>

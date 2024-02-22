@@ -3,10 +3,10 @@
   <ThingDef Abstract="True" ParentName="OrganicProductBase" Name="InternalOrgansProductBase">
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
-      <MarketValue>20</MarketValue>
+      <MarketValue>2</MarketValue>
       <Mass>0.1</Mass>
       <MaxHitPoints>60</MaxHitPoints>
-      <Flammability>0.6</Flammability>
+      <Flammability>0.5</Flammability>
       <Nutrition>0.05</Nutrition>
       <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
     </statBases>
@@ -32,10 +32,10 @@
   <ThingDef Abstract="True" ParentName="OrganicProductBase" Name="ExternalOrgansProductBase">
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
-      <MarketValue>20</MarketValue>
-      <Mass>0.1</Mass>
-      <MaxHitPoints>60</MaxHitPoints>
-      <Flammability>0.6</Flammability>
+      <MarketValue>2</MarketValue>
+      <Mass>0.03</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>0.5</Flammability>
       <Nutrition>0.05</Nutrition>
       <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
     </statBases>
@@ -61,110 +61,119 @@
   <!-- Organs ThingDefs -->
 
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Liver</defName>
+    <defName>OD_Liver</defName>
     <label>liver</label>
     <description>Liver from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Liver</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Kidney</defName>
+    <defName>OD_Kidney</defName>
     <label>kidney</label>
     <description>Kidney from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Kidney</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Spleen</defName>
+    <defName>OD_Spleen</defName>
     <label>spleen</label>
     <description>Spleen from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Spleen</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Heart</defName>
+    <defName>OD_Heart</defName>
     <label>heart</label>
     <description>Heart from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Heart</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Brain</defName>
+    <defName>OD_Brain</defName>
     <label>brain</label>
     <description>Brain from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Brain</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Lung</defName>
+    <defName>OD_Lung</defName>
     <label>lung</label>
     <description>Lung from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Lung</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Intestine</defName>
+    <defName>OD_Intestine</defName>
     <label>intestine</label>
     <description>Intestine from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Intestine</texPath>
     </graphicData>
   </ThingDef>
   
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Gonad</defName>
+    <defName>OD_Gonad</defName>
     <label>gonad</label>
     <description>Gonad from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Gonad</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Sweetbread</defName>
+    <defName>OD_Sweetbread</defName>
     <label>sweetbread</label>
     <description>Sweetbread from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Sweetbread</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Tongue</defName>
+    <defName>OD_Tongue</defName>
     <label>tongue</label>
     <description>Tongue from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Tongue</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Eye</defName>
+    <defName>OD_Tripe</defName>
+    <label>tripe</label>
+    <description>Tripe from a creature. Can be used for cooking meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/OD_Tripe</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="InternalOrgansProductBase">
+    <defName>OD_Eye</defName>
     <label>eye</label>
     <description>Eye from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Eye</texPath>
     </graphicData>
   </ThingDef>
 
   <ThingDef ParentName="InternalOrgansProductBase">
-    <defName>OY_Ear</defName>
+    <defName>OD_Ear</defName>
     <label>ear</label>
     <description>Ear from a creature. Can be used for cooking meals.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Liver</texPath>
+      <texPath>Things/Item/Resource/OD_Ear</texPath>
     </graphicData>
   </ThingDef>
 
