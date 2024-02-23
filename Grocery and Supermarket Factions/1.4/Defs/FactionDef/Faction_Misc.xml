@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <FactionDef ParentName="FactionBase" Name="GrocerySupermarketFactionBase" Abstract="True">
+        <categoryTag>Outlander</categoryTag>
+        <settlementGenerationWeight>1</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <canMakeRandomly>true</canMakeRandomly>
+        <canSiege>true</canSiege>
+        <canStageAttacks>true</canStageAttacks>
+        <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+        <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+
+        <disallowedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+        </disallowedMemes>
+        <structureMemeWeights>
+            <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+            <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+            <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+            <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+            <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
+            <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginIslamic>
+            <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
+            <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
+        </structureMemeWeights>
+        <xenotypeSet>
+            <xenotypeChances>
+                <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+                <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.05</Dirtmole>
+                <Genie MayRequire="Ludeon.RimWorld.Biotech">0.025</Genie>
+                <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.025</Neanderthal>
+            </xenotypeChances>
+        </xenotypeSet>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Outlander</li>
+                </categories>
+                <commonality>0.8</commonality>
+            </li>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                </categories>
+                <commonality>0.2</commonality>
+            </li>
+        </backstoryFilters>
+
+        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    </FactionDef>
+
+    <FactionDef ParentName="GrocerySupermarketFactionBase" Name="GroceryFactionBase">
+        <defName>GroceryStore</defName>
+        <label>grocery store</label>
+        <description>These people is a group of people living in a settled area, focused on providing food and essentials for their community. They've been around for a long time, adapting to challenges along the way. Their main values are practicality and trade, as they work to make sure everyone has what they need to survive. They believe in being civil and cooperative, which helps them build trust and support each other as they deal with the difficulties of their environment.</description>
+        <colorSpectrum>
+            <li>(97, 191, 26)</li>
+        </colorSpectrum>
+        <requiredMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+        </requiredMemes>
+        <disallowedPrecepts>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Honorable</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Acceptable</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Abhorrent</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Horrible</li>
+        </disallowedPrecepts>
+        <classicIdeo>true</classicIdeo>
+        <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>381</configurationListOrderPriority>
+        <factionIconPath>World/WorldObjects/FactionIcons/GroceryStore</factionIconPath>
+        <modExtensions>
+            <li Class="KCSG.CustomGenOption">
+                <chooseFromlayouts>
+                    <li>GroceryStore_Base1</li>
+                    <li>GroceryStore_Base2</li>
+                </chooseFromlayouts>
+            </li>
+        </modExtensions>
+
+        <fixedLeaderKinds>
+            <li>Global_Manager</li>
+        </fixedLeaderKinds>
+
+        <pawnSingular>grocer</pawnSingular>
+        <pawnsPlural>grocers</pawnsPlural>
+        <listOrderPriority>380</listOrderPriority>
+        <leaderTitle>Global Manager</leaderTitle>
+        <techLevel>Industrial</techLevel>
+        <allowedCultures>
+            <li>Astropolitan</li>
+        </allowedCultures>
+
+        <caravanTraderKinds>
+            <li>Caravan_Outlander_BulkGoods</li>
+            <li>Caravan_Outlander_CombatSupplier</li>
+            <li>Caravan_Outlander_Exotic</li>
+            <li>Caravan_Outlander_PirateMerchant</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>
+            <li>Visitor_Outlander_Standard</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>
+            <li>Base_Outlander_Standard</li>
+        </baseTraderKinds>
+        <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+        <raidLootMaker>GroceryRaidLootMaker</raidLootMaker>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+
+        <pawnGroupMakers>
+            <li>
+                <kindDef>Combat</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <Grocery_Worker>10</Grocery_Worker>
+                    <Grocery_Security_Guard>10</Grocery_Security_Guard>
+                </options>
+            </li>
+
+            <li>
+                <kindDef>Combat</kindDef>
+                <commonality>35</commonality>
+                <options>
+                    <Grocery_Worker>10</Grocery_Worker>
+                    <Grocery_Security_Guard>20</Grocery_Security_Guard>
+                </options>
+            </li>
+
+            <li>
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <Grocery_Worker>10</Grocery_Worker>
+                    <Grocery_Security_Guard>10</Grocery_Security_Guard>
+                    <Villager_Child MayRequire="Ludeon.RimWorld.Biotech">10</Villager_Child>
+                </options>
+            </li>
+
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <Grocery_Trader>1</Grocery_Trader>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2</Alpaca>
+                    <Elephant>1</Elephant>
+                </carriers>
+                <guards>
+                    <Grocery_Security_Guard>20</Grocery_Security_Guard>
+                </guards>
+            </li>
+
+            <!-- Settlement Type -->
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <Sale_Representative>5</Sale_Representative>
+                    <Grocery_Worker>20</Grocery_Worker>
+                    <Grocery_Security_Guard>10</Grocery_Security_Guard>
+                    <Global_Manager>3</Global_Manager>
+                </options>
+            </li>
+
+            <!-- Quest Working Site Type -->
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Miners</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Miner>1</Miner>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Hunters</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Hunter>1</Hunter>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Loggers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Logger>1</Logger>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Farmers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Farmer>1</Farmer>
+                </options>
+            </li>
+        </pawnGroupMakers>
+    </FactionDef>
+
+    <!-- Raid Loot Maker, Reference to line 113 -->
+    <ThingSetMakerDef>
+        <defName>GroceryRaidLootMaker</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>Silver</li>
+                        <li>MedicineIndustrial</li>
+                        <li>ComponentIndustrial</li>
+                        <li>MealSurvivalPack</li>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
+
+    <!-- Supermarket Corporation Faction -->
+    <FactionDef ParentName="GrocerySupermarketFactionBase" Name="SupermarketFactionBase">
+        <defName>SupermarketCorporation</defName>
+        <label>supermarket corporation</label>
+        <description>The Supermarket Corporation dominates the settlement, controlling the Grocery Store. Driven by profit and efficiency, they've perfected their methods over generations. Their focus on capitalism and commerce aims to monopolize the market and maximize revenue, often conflicting with the community-focused values of other factions.</description>
+        <colorSpectrum>
+            <li>(23, 103, 183)</li>
+        </colorSpectrum>
+        <requiredMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+        </requiredMemes>
+        <disallowedPrecepts>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Honorable</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Acceptable</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Abhorrent</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Horrible</li>
+        </disallowedPrecepts>
+        <classicIdeo>true</classicIdeo>
+        <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>383</configurationListOrderPriority>
+        <factionIconPath>World/WorldObjects/FactionIcons/SupermarketCorporation</factionIconPath>
+        <modExtensions>
+            <li Class="KCSG.CustomGenOption">
+                <chooseFromlayouts>
+                    <li>SupermarketCorporation_Base1</li>
+                </chooseFromlayouts>
+            </li>
+        </modExtensions>
+
+        <fixedLeaderKinds>
+            <li>Chairman</li>
+        </fixedLeaderKinds>
+
+        <pawnSingular>marketer</pawnSingular>
+        <pawnsPlural>marketers</pawnsPlural>
+        <listOrderPriority>382</listOrderPriority>
+        <leaderTitle>Chairman</leaderTitle>
+        <techLevel>Industrial</techLevel>
+
+        <!-- Culture, Memes, Xenotype and Backstory Section -->
+        <allowedCultures>
+            <li>Astropolitan</li>
+        </allowedCultures>
+
+        <!-- Caravan Trader  Visitor Trader, Base Trader, and Loot Section -->
+        <caravanTraderKinds>
+            <li>Caravan_Outlander_BulkGoods</li>
+            <li>Caravan_Outlander_CombatSupplier</li>
+            <li>Caravan_Outlander_Exotic</li>
+            <li>Caravan_Outlander_PirateMerchant</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>
+            <li>Visitor_Outlander_Standard</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>
+            <li>Base_Outlander_Standard</li>
+        </baseTraderKinds>
+        <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+        <raidLootMaker>GroceryRaidLootMaker</raidLootMaker>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+
+        <!-- Raid, Visitor, Trader, and Settlement pawn generation Section -->
+        <pawnGroupMakers>
+            <li>
+                <!-- Normal fights, standard mix -->
+                <kindDef>Combat</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <Supermarket_Worker>5</Supermarket_Worker>
+                    <Supermarket_Security_Guard>15</Supermarket_Security_Guard>
+                </options>
+            </li>
+
+            <li>
+                <!-- Combat 2nd variant -->
+                <kindDef>Combat</kindDef>
+                <commonality>35</commonality>
+                <options>
+                    <Supermarket_Worker>5</Supermarket_Worker>
+                    <Supermarket_Security_Guard>30</Supermarket_Security_Guard>
+                </options>
+            </li>
+
+            <!-- Visitor Type -->
+            <li>
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <Supermarket_Worker>5</Supermarket_Worker>
+                    <Supermarket_Security_Guard>15</Supermarket_Security_Guard>
+                    <Villager_Child MayRequire="Ludeon.RimWorld.Biotech">5</Villager_Child>
+                </options>
+            </li>
+
+            <!-- Trader Type -->
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <Supermarket_Trader>1</Supermarket_Trader>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2</Alpaca>
+                    <Elephant>1</Elephant>
+                </carriers>
+                <guards>
+                    <Supermarket_Security_Guard>20</Supermarket_Security_Guard>
+                </guards>
+            </li>
+
+            <!-- Settlement Type -->
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <Sale_Representative>5</Sale_Representative>
+                    <Supermarket_Worker>20</Supermarket_Worker>
+                    <Supermarket_Security_Guard>20</Supermarket_Security_Guard>
+                    <Chairman>3</Chairman>
+                </options>
+            </li>
+
+            <!-- Quest Working Site Type -->
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Miners</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Miner>1</Miner>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Hunters</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Hunter>1</Hunter>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Loggers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Logger>1</Logger>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Farmers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Farmer>1</Farmer>
+                </options>
+            </li>
+        </pawnGroupMakers>
+    </FactionDef>
+
+</Defs>
