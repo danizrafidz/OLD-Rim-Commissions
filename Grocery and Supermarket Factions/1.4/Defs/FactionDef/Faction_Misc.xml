@@ -164,10 +164,10 @@
             <li>
                 <kindDef>Settlement</kindDef>
                 <options>
-                    <Sale_Representative>5</Sale_Representative>
-                    <Grocery_Worker>20</Grocery_Worker>
-                    <Grocery_Security_Guard>10</Grocery_Security_Guard>
-                    <Global_Manager>3</Global_Manager>
+                    <Sale_Representative>2.5</Sale_Representative>
+                    <Grocery_Worker>10</Grocery_Worker>
+                    <Grocery_Security_Guard>1</Grocery_Security_Guard>
+                    <Global_Manager>1.5</Global_Manager>
                 </options>
             </li>
 
@@ -247,6 +247,7 @@
             <li Class="KCSG.CustomGenOption">
                 <chooseFromlayouts>
                     <li>SupermarketCorporation_Base1</li>
+                    <li>SupermarketCorporation_Base2</li>
                 </chooseFromlayouts>
             </li>
         </modExtensions>
